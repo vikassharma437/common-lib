@@ -8,92 +8,90 @@
   <description>Common Module for Testing</description>
   
   <properties>
-   	<!--<maven.compiler.source>1.8</maven.compiler.source>
-   	<maven.compiler.target>1.8</maven.compiler.target>-->
-	<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
-	<java.version>11</java.version>
+     <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+     <java.version>11</java.version>
   </properties>
   
   <distributionManagement>
-	<snapshotRepository>
-	     <id>maven-snapshots</id>
-	     <url>http://nexus-repository-manager-nexus.apps.cluster-89e8.89e8.sandbox1804.opentlc.com/repository/maven-snapshots/</url>
-	</snapshotRepository>
-	<repository>
-	     <id>maven-releases</id>
-	     <url>http://nexus-repository-manager-nexus.apps.cluster-89e8.89e8.sandbox1804.opentlc.com/repository/maven-releases/</url>
-	</repository>
+     <snapshotRepository>
+	<id>maven-snapshots</id>
+	<url>http://nexus-repository-manager-nexus.apps.cluster-89e8.89e8.sandbox1804.opentlc.com/repository/maven-snapshots/</url>
+     </snapshotRepository>
+     <repository>
+	<id>maven-releases</id>
+	<url>http://nexus-repository-manager-nexus.apps.cluster-89e8.89e8.sandbox1804.opentlc.com/repository/maven-releases/</url>
+     </repository>
   </distributionManagement>
   <parent>
-	<groupId>org.springframework.boot</groupId>
-	<artifactId>spring-boot-starter-parent</artifactId>
-	<version>2.3.5.RELEASE</version>
-	<relativePath/> <!-- lookup parent from repository -->
+     <groupId>org.springframework.boot</groupId>
+     <artifactId>spring-boot-starter-parent</artifactId>
+     <version>2.3.5.RELEASE</version>
+     <relativePath/> <!-- lookup parent from repository -->
   </parent>
   <dependencies>
-	<!-- External Dependencies -->
-	<dependency>
-	    <groupId>org.springframework.boot</groupId>
-	    <artifactId>spring-boot-starter-data-jpa</artifactId>
-	</dependency>
-	<dependency>
-	    <groupId>org.springframework.boot</groupId>
-	    <artifactId>spring-boot-starter-security</artifactId>
-	</dependency>
-	<dependency>
-	    <groupId>org.springframework.boot</groupId>
-	    <artifactId>spring-boot-starter-thymeleaf</artifactId>
-	</dependency>
-	<dependency>
-	    <groupId>org.springframework.boot</groupId>
-	    <artifactId>spring-boot-starter-web</artifactId>
-	</dependency>
-	<!--WebJars-->
-	<dependency>
-	    <groupId>org.webjars</groupId>
-	    <artifactId>bootstrap</artifactId>
-	    <version>3.3.4</version>
-	</dependency>
-	<dependency>
-	    <groupId>org.webjars</groupId>
-	    <artifactId>jquery</artifactId>
-	    <version>2.1.4</version>
-	</dependency>
-	<dependency>
-	     <groupId>com.h2database</groupId>
-	     <artifactId>h2</artifactId>
-	     <scope>compile</scope>
-	</dependency>
-	<dependency>
-	     <groupId>org.springframework.boot</groupId>
-	     <artifactId>spring-boot-starter-test</artifactId>
-	     <scope>test</scope>
-	</dependency>
+     <!-- External Dependencies -->
+     <dependency>
+	<groupId>org.springframework.boot</groupId>
+	<artifactId>spring-boot-starter-data-jpa</artifactId>
+     </dependency>
+     <dependency>
+	<groupId>org.springframework.boot</groupId>
+	<artifactId>spring-boot-starter-security</artifactId>
+     </dependency>
+     <dependency>
+	<groupId>org.springframework.boot</groupId>
+	<artifactId>spring-boot-starter-thymeleaf</artifactId>
+     </dependency>
+     <dependency>
+	<groupId>org.springframework.boot</groupId>
+	<artifactId>spring-boot-starter-web</artifactId>
+     </dependency>
+     <!--WebJars-->
+     <dependency>
+	<groupId>org.webjars</groupId>
+	<artifactId>bootstrap</artifactId>
+	<version>3.3.4</version>
+     </dependency>
+     <dependency>
+	<groupId>org.webjars</groupId>
+	<artifactId>jquery</artifactId>
+	<version>2.1.4</version>
+     </dependency>
+     <dependency>
+	<groupId>com.h2database</groupId>
+	<artifactId>h2</artifactId>
+        <scope>compile</scope>
+     </dependency>
+     <dependency>
+	<groupId>org.springframework.boot</groupId>
+	<artifactId>spring-boot-starter-test</artifactId>
+	<scope>test</scope>
+     </dependency>
     </dependencies>
 	
     <build>
 	<plugins>
       	    <plugin>
-            <groupId>org.apache.maven.plugins</groupId>
-            <artifactId>maven-surefire-plugin</artifactId>
-            <version>2.19.1</version>
-            <configuration>
-                <skipTests>true</skipTests>
-            </configuration>
-        </plugin>
-	<plugin>
-	    <groupId>org.apache.maven.plugins</groupId>
-	    <artifactId>maven-jar-plugin</artifactId>
-	    <version>2.4</version>	    
-        </plugin>
-        <plugin>
-	    <groupId>org.apache.maven.plugins</groupId>
-	    <artifactId>maven-compiler-plugin</artifactId>
-	    <version>3.8.1</version>
-	    <configuration>
-	    <release>${java.version}</release>
-	</configuration>
-    </plugin>
-  </plugins>
-</build>
+               <groupId>org.apache.maven.plugins</groupId>
+               <artifactId>maven-surefire-plugin</artifactId>
+               <version>2.19.1</version>
+               <configuration>
+                  <skipTests>true</skipTests>
+               </configuration>
+            </plugin>
+	    <plugin>
+	       <groupId>org.apache.maven.plugins</groupId>
+	       <artifactId>maven-jar-plugin</artifactId>
+	       <version>2.4</version>	    
+            </plugin>
+            <plugin>
+	       <groupId>org.apache.maven.plugins</groupId>
+	       <artifactId>maven-compiler-plugin</artifactId>
+	       <version>3.8.1</version>
+	       <configuration>
+	    	  <release>${java.version}</release>
+	       </configuration>
+            </plugin>
+         </plugins>
+     </build>
 </project>
